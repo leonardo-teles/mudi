@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-		<title>Novo Pedido</title>
-	</head>
+	<head th:replace="~{base :: head}"></head>
 	
 	<body>
+		<div th:replace="~{base :: logo}"></div>
+		
 		<div class="container">
-			
-			<div class="jumbotron mb-0">
-				<h1 class="display-4">Novo Pedido</h1>
-			</div>
-
+			<div th:replace="~{base :: titulo('Novo Pedido')}"></div>
+				
 			<div class="card mt-3">
 				<form th:object="${requisicaoNovoPedido}" class="card-body" action="/pedido/novo" method="post">
 					<div class="form-group">
