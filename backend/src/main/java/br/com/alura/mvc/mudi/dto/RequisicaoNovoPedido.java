@@ -1,13 +1,18 @@
 package br.com.alura.mvc.mudi.dto;
 
+import javax.validation.constraints.NotBlank;
+
 import br.com.alura.mvc.mudi.model.Pedido;
 
 public class RequisicaoNovoPedido {
 
+	@NotBlank
 	private String nomeProduto;
 	
-	private String urlPorduto;
+	@NotBlank
+	private String urlProduto;
 	
+	@NotBlank
 	private String urlImagem;
 	
 	private String descricao;
@@ -20,12 +25,12 @@ public class RequisicaoNovoPedido {
 		this.nomeProduto = nomeProduto;
 	}
 
-	public String getUrlPorduto() {
-		return urlPorduto;
+	public String getUrlProduto() {
+		return urlProduto;
 	}
 
-	public void setUrlPorduto(String urlPorduto) {
-		this.urlPorduto = urlPorduto;
+	public void setUrlProduto(String urlProduto) {
+		this.urlProduto = urlProduto;
 	}
 
 	public String getUrlImagem() {
